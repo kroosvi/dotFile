@@ -1,0 +1,54 @@
+#          ___    __                   __
+#         /\_ \  /\ \__               /\ \__
+#   __  __\//\ \ \ \ ,_\  _ __    __  \ \ ,_\    __   _ __    ___ ___
+#  /\ \/\ \ \ \ \ \ \ \/ /\`'__\/'__`\ \ \ \/  /'__`\/\`'__\/' __` __`\
+#  \ \ \_\ \ \_\ \_\ \ \_\ \ \//\ \L\.\_\ \ \_/\  __/\ \ \/ /\ \/\ \/\ \
+#   \ \____/ /\____\\ \__\\ \_\\ \__/.\_\\ \__\ \____\\ \_\ \ \_\ \_\ \_\
+#    \/___/  \/____/ \/__/ \/_/ \/__/\/_/ \/__/\/____/ \/_/  \/_/\/_/\/_/
+
+font:
+  normal:
+    family: Source Code Pro
+    style: Regular
+
+  bold:
+    family: JetBrainsMono Nerd Font
+    style: Bold
+
+  italic:
+    family: JetBrainsMono Nerd Font
+    style: Italic
+
+  bold_italic:
+    family: JetBrainsMono Nerd Font
+    style: Bold Italic
+  size: 12
+
+colors:
+  name: Visibone Alt. 2
+  author: Gutterslob
+  primary:
+    background: "#333333"
+    foreground: "#CCCCCC"
+  cursor:
+    text: "#333333"
+    cursor: "#CCCCCC"
+  normal:
+    black: "#666666"
+    red: "#CC6699"
+    green: "#99CC66"
+    yellow: "#CC9966"
+    blue: "#6699CC"
+    magenta: "#9966CC"
+    cyan: "#66CC99"
+    white: "#CCCCCC"
+  bright:
+    black: "#999999"
+    red: "#FF99CC"
+    green: "#CCFF99"
+    yellow: "#FFCC99"
+    blue: "#99CCFF"
+    magenta: "#CC99FF"
+    cyan: "#99FFCC"
+    white: "#FFFFFF"
+theme: Visibone-alt-2
