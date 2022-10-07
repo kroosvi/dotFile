@@ -8,8 +8,8 @@
 
 font:
   normal:
-    family: Source Code Pro
-    style: Regular
+    family: JetBrainsMono
+    style: light 
 
   bold:
     family: JetBrainsMono Nerd Font
