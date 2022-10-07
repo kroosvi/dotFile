@@ -9,11 +9,11 @@ exec_always --no-startup-id unclutter
 exec        --no-startup-id nm-applet
 exec        --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id feh --bg-max --randomize ~/wallpapers
-exec_always --no-startup-id picom ~/.config/picom/picom.conf
+exec_always --no-startup-id picom 
 exec_always --no-startup-id .config/polybar/launch.sh --panels
 
 # removes the titlebar
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 
 
 #/---screenlayout---/
 exec_always --no-startup-id $HOME/.screenlayout/simple.sh
@@ -88,19 +88,19 @@ bindsym $mod+Shift+c reload
 
 
 #/---change focus---/#
-bindsym $mod+l focus up
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+h focus right
+bindsym $mod+k focus up
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+l focus right
 
 #/---kill focused window---/#
 bindsym $mod+Shift+q kill
 
 #/---Vim style move focused window---/#
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+h move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 #/---exit i3---/#
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
@@ -116,9 +116,6 @@ bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-
-
-
 
 #/---workspace(name,move) setting---/#
 set $ws1 "I"
@@ -158,7 +155,6 @@ bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
-
 
 
 #/---resize window---/#
