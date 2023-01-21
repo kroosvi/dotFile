@@ -1,1 +1,3 @@
-# dotFile_learning
+# Path of config
+
+1. Nvim 
