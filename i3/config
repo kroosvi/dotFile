@@ -4,13 +4,12 @@
 #------------AutoStart----------------#
 #-------------------------------------#
 exec_always --no-startup-id mpd
-exec_always --no-startup-id fcitx
 exec_always --no-startup-id unclutter
 exec        --no-startup-id nm-applet
 exec        --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec_always --no-startup-id feh --bg-max --randomize ~/wallpapers
+exec_always --no-startup-id feh --bg-max ~/wallpapers/gruv-houses.png
 exec_always --no-startup-id picom 
-exec_always --no-startup-id .config/polybar/launch.sh --panels
+exec_always --no-startup-id .config/polybar/launch.sh --colorblocks
 
 # removes the titlebar
 for_window [class="^.*"] border pixel 
@@ -24,6 +23,7 @@ exec_always --no-startup-id $HOME/.screenlayout/simple.sh
 set $launcher ~/.config/rofi/launchers/type-1/launcher.sh
 set $browser1 brave
 set $browser2 google-chrome-stable
+set $fileManger thunar
 
 #launcer
 bindsym $mod+d       exec $launcher
@@ -37,7 +37,7 @@ bindsym $mod+F1      exec $browser1
 
 #tools
 bindsym $mod+Return  exec alacritty
-bindsym $mod+Shift+F exec nautilus 
+bindsym $mod+Shift+F exec $fileManger
 bindsym $mod+Print   exec flameshot gui --path ~/screenShot
 
 #/-----------------------------------/#
