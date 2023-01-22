@@ -2,6 +2,7 @@ require("core.packer-config")
 require("core.vim-setting")
 require("core.finder-config")
 require("core.nvim-tree")
+require("core.keymaping")
 
 require("looks.UI-related")
 
