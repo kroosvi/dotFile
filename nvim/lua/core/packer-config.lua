@@ -49,6 +49,9 @@ require('packer').startup(function(use)
   -- autoclose for parenthese
   use 'm4xshen/autoclose.nvim'
 
+  -- lazy git 
+  use {"akinsho/toggleterm.nvim", tag = '*'}
+
   -- Git related plugins
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
