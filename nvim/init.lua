@@ -3,6 +3,7 @@ require("core.vim-setting")
 require("core.finder-config")
 require("core.nvim-tree")
 require("core.keymapping")
+require("core.autoclose")
 
 require("looks.UI-related")
 require("looks.tab")
