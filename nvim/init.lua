@@ -5,6 +5,7 @@ require("core.nvim-tree")
 require("core.keymapping")
 
 require("looks.UI-related")
+require("looks.tab")
 
 require("LSP.lsp-config")
 

@@ -8,6 +8,11 @@ vim.opt.termguicolors = true
 -- setup with some options
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
+  auto_reload_on_write = true,
+
+  hijack_netrw = true,
+
+
   view = {
     adaptive_size = true,
     mappings = {
@@ -29,5 +34,17 @@ require("nvim-tree").setup({
     enable = true,
     ignore = false,
     timeout = 400,
+  },
+
+  icons = {
+    git = {
+              unstaged = "✗",
+              staged =   "✓",
+              unmerged = "",
+              renamed =  "➜",
+              untracked ="★",
+              deleted =  "",
+              ignored =  "◌",
+          },
   },
 })

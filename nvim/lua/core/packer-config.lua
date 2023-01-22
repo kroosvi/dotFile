@@ -46,6 +46,9 @@ require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
   use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
 
+  -- autoclose for parenthese
+  use 'm4xshen/autoclose.nvim'
+
   -- Git related plugins
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
