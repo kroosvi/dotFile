@@ -42,6 +42,10 @@ require('packer').startup(function(use)
     after = 'nvim-treesitter',
   }
 
+  --tab for nvim 
+  use 'nvim-tree/nvim-web-devicons'
+  use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
+
   -- Git related plugins
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'

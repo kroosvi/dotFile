@@ -10,3 +10,5 @@ end
 -- open nvim tree
 Map('n', '<leader>tt', ':NvimTreeToggle<CR>',{silent=true}) --Open/close(toggle)
 Map('n', '<leader>ttf',':NvimTreeFocus<CR>',{silent=true})  --focus the nvim tree
+
+--
