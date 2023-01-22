@@ -1,0 +1,190 @@
+#@author  Kroozy
+#Last Edited: 2023/01/21
+#-------------------------------------#
+#------------AutoStart----------------#
+#-------------------------------------#
+exec_always --no-startup-id mpd
+exec_always --no-startup-id fcitx
+exec_always --no-startup-id unclutter
+exec        --no-startup-id nm-applet
+exec        --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec_always --no-startup-id feh --bg-max --randomize ~/wallpapers
+exec_always --no-startup-id picom 
+exec_always --no-startup-id .config/polybar/launch.sh --panels
+
+# removes the titlebar
+for_window [class="^.*"] border pixel 
+
+#/---screenlayout---/
+exec_always --no-startup-id $HOME/.screenlayout/simple.sh
+
+#-------------------------------------#
+#-------Start Some Common Apps--------#
+#-------------------------------------#
+set $launcher ~/.config/rofi/launchers/type-1/launcher.sh
+set $browser1 brave
+set $browser2 google-chrome-stable
+
+#launcer
+bindsym $mod+d       exec $launcher
+
+#audio
+bindsym $mod+F5      exec pavucontrol
+
+#browser
+bindsym $mod+F2      exec $browser2
+bindsym $mod+F1      exec $browser1
+
+#tools
+bindsym $mod+Return  exec alacritty
+bindsym $mod+Shift+F exec nautilus 
+bindsym $mod+Print   exec flameshot gui --path ~/screenShot
+
+#/-----------------------------------/#
+#/-------------I3-Gap----------------/#
+#/-----------------------------------/#
+gaps inner 10
+gaps outer 10
+
+
+#-------------------------------------#
+#--------Initial_I3_Settings----------#
+#-------------------------------------#
+
+#/---Set-Mod---/#
+set $mod Mod4
+
+#/---boarder size---/#
+font pango:Source Code Pro 0
+
+#/---restart i3 inplace---/#
+bindsym $mod+Shift+r restart
+
+#/---window boarder---/#
+default_border pixel 1
+default_floating_border pixel 1
+
+#/---vertical orientation---/#
+bindsym $mod+v split v
+
+#/---focus the child container---/#
+#bindsym $mod+d focus child
+
+#/---focus the parent container---/#
+bindsym $mod+a focus parent
+
+#/---change container layout---/#
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+#/---enter fullscreen mode---/#
+bindsym $mod+f fullscreen toggle
+
+#/---toggle/tiling/floating---/#
+bindsym $mod+Shift+space floating toggle
+
+
+#/---reload the configuration file---/#
+bindsym $mod+Shift+c reload
+
+
+#/---change focus---/#
+bindsym $mod+k focus up
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+l focus right
+
+#/---kill focused window---/#
+bindsym $mod+Shift+q kill
+
+#/---Vim style move focused window---/#
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+#/---exit i3---/#
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+#/---Sound Control---/#
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+#/---workspace(name,move) setting---/#
+set $ws1 "I"
+set $ws2 "II"
+set $ws3 "III"
+set $ws4 "IV"
+set $ws5 "V"
+set $ws6 "VI"
+set $ws7 "VII"
+set $ws8 "VIII"
+set $ws9 "IX"
+set $ws10 "X"
+
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+
+bindsym $mod+Ctrl+1 move container to workspace $ws1
+bindsym $mod+Ctrl+2 move container to workspace $ws2
+bindsym $mod+Ctrl+3 move container to workspace $ws3
+bindsym $mod+Ctrl+4 move container to workspace $ws4
+bindsym $mod+Ctrl+5 move container to workspace $ws5
+bindsym $mod+Ctrl+6 move container to workspace $ws6
+bindsym $mod+Ctrl+7 move container to workspace $ws7
+bindsym $mod+Ctrl+8 move container to workspace $ws8
+
+bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+
+
+#/---resize window---/#
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+bindsym $mod+r mode "resize"
+
+
+#--------------Color--------------#
+client.focused             #FFA552 #381d2a  #bt5624
