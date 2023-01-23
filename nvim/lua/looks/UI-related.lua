@@ -54,6 +54,7 @@ require('gitsigns').setup {
   },
 }
 
+
 --Everforest
 require("everforest").setup({
   -- Controls the "hardness" of the background. Options are "soft", "medium" or "hard".
@@ -64,5 +65,63 @@ require("everforest").setup({
   --
   -- 2 will have more UI components be transparent (e.g. status line
   -- background).
-  transparent_background_level = 0,
+  transparent_background_level = 2,
 })
+
+--material
+--Options {darker lighter oceanic palenight deep ocean}
+
+
+
+require('material').setup({
+  terminal = true,
+  sidebar  = true,
+  floating_windows = true,
+  cursor_line = true,
+
+  styles = { -- Give comments style such as bold, italic, underline etc.
+      comments = { --[[ italic = true ]] },
+      strings = { --[[ bold = true ]] },
+      keywords = { --[[ underline = true ]] },
+      functions = { --[[ bold = true, undercurl = true ]] },
+      variables = {},
+      operators = {},
+      types = {},
+    },
+
+  plugins = { -- Uncomment the plugins that you use to highlight them
+        -- Available plugins:
+        -- "dap",
+        -- "dashboard",
+        "gitsigns",
+        -- "hop",
+        -- "indent-blankline",
+        -- "lspsaga",
+        -- "mini",
+        -- "neogit",
+        -- "nvim-cmp",
+        -- "nvim-navic",
+        "nvim-tree",
+        -- "nvim-web-devicons",
+        -- "sneak",
+        "telescope",
+        -- "trouble",
+        -- "which-key",
+  },
+
+  high_visibility = {
+      lighter = true, -- Enable higher contrast text for lighter style
+      darker = true    -- Enable higher contrast text for darker style
+    },
+
+  async_loading = true,
+})
+
+
+vim.g.material_style = "oceanic"
+
+-- Set colorscheme
+vim.o.termguicolors = true
+vim.cmd 'colorscheme material'
+
+

@@ -65,6 +65,10 @@ require('packer').startup(function(use)
 
   --themes
   use 'neanias/everforest-nvim'
+  use 'marko-cerovac/material.nvim'
+
+  --lazy git 
+  use 'kdheepak/lazygit.nvim'
 
   -- Fuzzy Finder (files, lsp, etc)
   use { 'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = { 'nvim-lua/plenary.nvim' } }
