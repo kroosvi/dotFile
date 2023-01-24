@@ -3,7 +3,7 @@ require("toggleterm").setup{
     open_mapping = [[<c-\>]],
     hide_number = true,
     start_in_insert = true,
-    shell = "/bin/fish",
+    shell = "/bin/zsh",
     direction = "float",
 
     close_on_exit = true, -- close the terminal window when the process exits

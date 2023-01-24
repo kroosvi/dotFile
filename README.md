@@ -1,3 +1,8 @@
-# Path of config
+# Overview
 
-1. Nvim 
+This is my peronsal config for the following applications
+
+- Nvim 
+- Polybar
+- Adding
+

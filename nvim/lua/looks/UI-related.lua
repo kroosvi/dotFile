@@ -46,7 +46,7 @@ require('indent_blankline').setup {
 -- See `:help gitsigns.txt`
 require('gitsigns').setup {
   signs = {
-    add = { text = '+' },
+    add = { text = '' },
     change = { text = '~' },
     delete = { text = '_' },
     topdelete = { text = '‾' },
@@ -54,6 +54,9 @@ require('gitsigns').setup {
   },
 }
 
+-- Set colorscheme
+vim.o.termguicolors = true
+vim.cmd 'colorscheme material'
 
 --Everforest
 require("everforest").setup({
@@ -69,10 +72,6 @@ require("everforest").setup({
 })
 
 --material
---Options {darker lighter oceanic palenight deep ocean}
-
-
-
 require('material').setup({
   terminal = true,
   sidebar  = true,
@@ -95,11 +94,11 @@ require('material').setup({
         -- "dashboard",
         "gitsigns",
         -- "hop",
-        -- "indent-blankline",
+        "indent-blankline",
         -- "lspsaga",
         -- "mini",
         -- "neogit",
-        -- "nvim-cmp",
+        "nvim-cmp",
         -- "nvim-navic",
         "nvim-tree",
         -- "nvim-web-devicons",
@@ -117,11 +116,5 @@ require('material').setup({
   async_loading = true,
 })
 
-
-vim.g.material_style = "oceanic"
-
--- Set colorscheme
-vim.o.termguicolors = true
-vim.cmd 'colorscheme material'
-
-
+--Options {darker lighter oceanic palenight deep ocean}
+vim.g.material_style = "darker"

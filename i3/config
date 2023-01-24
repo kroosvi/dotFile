@@ -22,7 +22,7 @@ exec_always --no-startup-id $HOME/.screenlayout/simple.sh
 set $launcher ~/.config/rofi/launchers/type-1/launcher.sh
 set $browser1 brave
 set $browser2 google-chrome-stable
-set $fileManger nautilus
+set $fileManger thunar
 set $terminal kitty
 
 #launcer
@@ -39,6 +39,11 @@ bindsym $mod+F1      exec $browser1
 bindsym $mod+Return  exec $terminal
 bindsym $mod+Shift+F exec $fileManger
 bindsym $mod+Print   exec flameshot gui --path ~/screenShot
+bindsym $mod+Shift+n exec blugon
+
+#change red <-> blue
+bindsym $mod+Shift+F8 exec blugon --setcurrent="+600"
+bindsym $mod+Shift+F7 exec blugon --setcurrent="-600"
 
 #/-----------------------------------/#
 #/-------------I3-Gap----------------/#
