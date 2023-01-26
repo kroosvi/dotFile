@@ -7,6 +7,9 @@ vim.wo.number = true
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
+-- Disable warp
+vim.wo.wrap = false
+
 -- Enable break indent
 vim.o.breakindent = true
 

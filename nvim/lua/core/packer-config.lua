@@ -10,6 +10,13 @@ require('packer').startup(function(use)
   tag = 'nightly' -- optional, updated every week. (see issue #1193)
 }
 
+  --useful plugins
+  --Surround
+  use 'kylechui/nvim-surround'
+
+  --dashborad
+  use 'glepnir/dashboard-nvim'
+
   use { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     requires = {
@@ -27,7 +34,7 @@ require('packer').startup(function(use)
 
   use { -- Autocompletion
     'hrsh7th/nvim-cmp',
-    requires = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
+    requires = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip'},
   }
 
   use { -- Highlight, edit, and navigate code
@@ -57,15 +64,14 @@ require('packer').startup(function(use)
   use 'tpope/vim-rhubarb'
   use 'lewis6991/gitsigns.nvim'
 
-  use 'navarasu/onedark.nvim' -- Theme inspired by Atom
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
   use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
   use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
 
   --themes
-  use 'neanias/everforest-nvim'
-  use 'marko-cerovac/material.nvim'
+  use 'RRethy/nvim-base16'
+  use 'EdenEast/nightfox.nvim'
 
   --lazy git 
   use 'kdheepak/lazygit.nvim'

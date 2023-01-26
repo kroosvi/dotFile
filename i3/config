@@ -1,5 +1,5 @@
 #@author  Kroozy
-#Last Edited: 2023/01/21
+#Last Edited: 2023/01/25
 #-------------------------------------#
 #------------AutoStart----------------#
 #-------------------------------------#
@@ -9,6 +9,7 @@ exec        --no-startup-id nm-applet
 exec        --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id feh --bg-max ~/wallpapers/gruv-houses.png
 exec_always --no-startup-id .config/polybar/launch.sh --colorblocks 
+exec_always --no-startup-id picom
 
 # removes the titlebar
 for_window [class="^.*"] border pixel 
@@ -51,6 +52,12 @@ bindsym $mod+Shift+F7 exec blugon --setcurrent="-600"
 
 gaps inner 10
 gaps outer 10
+
+
+# Smart gaps (gaps used if only more than one container on the workspace)
+smart_gaps on
+
+smart_borders on
 
 
 #-------------------------------------#
@@ -194,3 +201,7 @@ bindsym $mod+r mode "resize"
 
 #--------------Color--------------#
 client.focused             #FFA552 #381d2a  #bt5624
+
+#allowing windows to folat 
+for_window [class="(?i)virtualbox"] floating enable border normal
+for_window [class="Pavucontrol"] floating enable

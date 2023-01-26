@@ -55,66 +55,13 @@ require('gitsigns').setup {
 }
 
 -- Set colorscheme
+-- Some Good Options 
+-- for base16
+-- {base16-ayu-mirage base16-everforest base16-tomorrow-night-eightie}
+-- {dark   : base16-rose-pine}
+-- {lighter: }
+-- {light  : }
+
+---{options for nightfoxs: nodrfox, terafox, duskfox, dawnfox}
 vim.o.termguicolors = true
-vim.cmd 'colorscheme material'
-
---Everforest
-require("everforest").setup({
-  -- Controls the "hardness" of the background. Options are "soft", "medium" or "hard".
-  -- Default is "medium".
-  background = "hard",
-  -- How much of the background should be transparent. Options are 0, 1 or 2.
-  -- Default is 0.
-  --
-  -- 2 will have more UI components be transparent (e.g. status line
-  -- background).
-  transparent_background_level = 2,
-})
-
---material
-require('material').setup({
-  terminal = true,
-  sidebar  = true,
-  floating_windows = true,
-  cursor_line = true,
-
-  styles = { -- Give comments style such as bold, italic, underline etc.
-      comments = { --[[ italic = true ]] },
-      strings = { --[[ bold = true ]] },
-      keywords = { --[[ underline = true ]] },
-      functions = { --[[ bold = true, undercurl = true ]] },
-      variables = {},
-      operators = {},
-      types = {},
-    },
-
-  plugins = { -- Uncomment the plugins that you use to highlight them
-        -- Available plugins:
-        -- "dap",
-        -- "dashboard",
-        "gitsigns",
-        -- "hop",
-        "indent-blankline",
-        -- "lspsaga",
-        -- "mini",
-        -- "neogit",
-        "nvim-cmp",
-        -- "nvim-navic",
-        "nvim-tree",
-        -- "nvim-web-devicons",
-        -- "sneak",
-        "telescope",
-        -- "trouble",
-        -- "which-key",
-  },
-
-  high_visibility = {
-      lighter = true, -- Enable higher contrast text for lighter style
-      darker = true    -- Enable higher contrast text for darker style
-    },
-
-  async_loading = true,
-})
-
---Options {darker lighter oceanic palenight deep ocean}
-vim.g.material_style = "darker"
+vim.cmd 'colorscheme duskfox'
