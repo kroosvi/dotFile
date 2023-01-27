@@ -36,4 +36,7 @@ tmap('n', '<A-0>', '<Cmd>BufferLast<CR>', opts)
 --close buffer
 tmap('n', '<A-c>', '<CMD>BufferClose<CR>',opts)
 
+-- Operations to edit the buffer
 tmap('n', '<C-s>', '<CMD>w<CR>', opts)
+-- tmap
+-- tmap('n', '<C')
