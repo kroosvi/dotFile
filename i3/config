@@ -10,6 +10,7 @@ exec        --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id feh --bg-max --randomize ~/wallpapers
 exec_always --no-startup-id .config/polybar/launch.sh --colorblocks 
 exec_always --no-startup-id picom
+exec        --no-startup-id fcitx -d
 
 # removes the titlebar
 for_window [class="^.*"] border pixel 
@@ -42,10 +43,6 @@ bindsym $mod+Shift+F exec $fileManger
 bindsym $mod+Print   exec flameshot gui --path ~/screenShot
 bindsym $mod+Shift+n exec blugon
 
-#change red <-> blue
-bindsym $mod+Shift+F8 exec blugon --setcurrent="+600"
-bindsym $mod+Shift+F7 exec blugon --setcurrent="-600"
-
 #/-----------------------------------/#
 #/-------------I3-Gap----------------/#
 #/-----------------------------------/#
@@ -56,7 +53,6 @@ gaps outer 10
 
 # Smart gaps (gaps used if only more than one container on the workspace)
 smart_gaps on
-
 smart_borders on
 
 
@@ -133,7 +129,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 #/---workspace(name,move) setting---/#
-set $ws1 "I"
+set $ws1 "I"   
 set $ws2 "II"
 set $ws3 "III"
 set $ws4 "IV"
@@ -144,7 +140,11 @@ set $ws8 "VIII"
 set $ws9 "IX"
 set $ws10 "X"
 
-bindsym $mod+1 workspace $ws1
+#Assign specific workspace to specific monitor
+workspace $ws1 output DP-0
+workspace $ws2 output HDMI-0
+
+bindsym $mod+1 workspace $ws1 
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
