@@ -46,7 +46,7 @@ require('indent_blankline').setup {
 -- See `:help gitsigns.txt`
 require('gitsigns').setup {
   signs = {
-    add = { text = '' },
+    add = { text = '+' },
     change = { text = '~' },
     delete = { text = '_' },
     topdelete = { text = '‾' },
@@ -57,11 +57,11 @@ require('gitsigns').setup {
 -- Set colorscheme
 -- Some Good Options 
 -- for base16
--- {base16-ayu-mirage base16-everforest base16-tomorrow-night-eightie}
--- {dark   : base16-rose-pine}
+-- {base16-ayu-mirage base16-everforest base16-tomorrow-night}
+-- {dark   : base16-rose-pine , base16-eighties}
 -- {lighter: }
--- {light  : }
+-- {light  : base16-google-light }
 
----{options for nightfoxs(that I liked): nordfox,dawnfox}
+---{options for nightfoxs(that I liked): nordfox,dawnfox(lighter)}
 vim.o.termguicolors = true
-vim.cmd 'colorscheme base16-everforest'
+vim.cmd 'colorscheme base16-material-lighter'

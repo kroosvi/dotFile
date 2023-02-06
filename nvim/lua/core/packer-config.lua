@@ -34,9 +34,9 @@ require('packer').startup(function(use)
 
   use { -- Autocompletion
     'hrsh7th/nvim-cmp',
-    requires = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip'},
+    requires = {'hrsh7th/cmp-path','hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip'},
   }
-
+    
   use { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     run = function()
@@ -55,6 +55,16 @@ require('packer').startup(function(use)
 
   -- autoclose for parenthese
   use 'm4xshen/autoclose.nvim'
+
+  --cursor
+  use 'gen740/SmoothCursor.nvim'
+
+  --Tools for Rust
+  use 'simrat39/rust-tools.nvim'
+
+    --Debugging Tools for rust
+    use 'nvim-lua/plenary.nvim'
+    use 'mfussenegger/nvim-dap'
 
   -- lazy git 
   use {"akinsho/toggleterm.nvim", tag = '*'}

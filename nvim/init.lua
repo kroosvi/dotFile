@@ -10,5 +10,4 @@ require("looks.UI-related")
 require("looks.tab")
 
 require("LSP.lsp-config")
-
 --Wanted: Implement a theme changer base on time(logic control flow basically)

@@ -7,10 +7,10 @@ exec_always --no-startup-id mpd
 exec_always --no-startup-id unclutter
 exec        --no-startup-id nm-applet
 exec        --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec_always --no-startup-id feh --bg-max --randomize ~/wallpapers
 exec_always --no-startup-id .config/polybar/launch.sh --colorblocks 
-exec_always --no-startup-id picom
+exec_always                 picom
 exec        --no-startup-id fcitx -d
+exec        --no-startup-id feh --bg-scale --randomize ~/wallpapers
 
 # removes the titlebar
 for_window [class="^.*"] border pixel 
@@ -25,10 +25,10 @@ set $launcher ~/.config/rofi/launchers/type-1/launcher.sh
 set $browser1 brave
 set $browser2 google-chrome-stable
 set $fileManger thunar
-set $terminal kitty
+set $terminal alacritty
 
 #launcer
-bindsym $mod+d       exec $launcher
+bindsym $mod+d       exec $launcher 
 
 #audio
 bindsym $mod+F5      exec pavucontrol
