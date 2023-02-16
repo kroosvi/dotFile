@@ -203,6 +203,9 @@ cmp.setup {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
     { name = 'path'},
+    { name = 'emoji'},
+    { name = 'calc'},
+    { name = "fonts", option = { space_filter = "-" }},
   },
 }
 

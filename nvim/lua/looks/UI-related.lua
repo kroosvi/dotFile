@@ -64,4 +64,4 @@ require('gitsigns').setup {
 
 ---{options for nightfoxs(that I liked): nordfox,dawnfox(lighter)}
 vim.o.termguicolors = true
-vim.cmd 'colorscheme base16-material-lighter'
+vim.cmd 'colorscheme base16-rose-pine'
