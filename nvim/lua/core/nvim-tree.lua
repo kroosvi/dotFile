@@ -5,13 +5,19 @@ vim.g.loaded_netrwPlugin = 1
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
+
+local function open_nvim_tree()
+
+  -- open the tree
+  require("nvim-tree.api").tree.open()
+end
+
 -- setup with some options
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
   auto_reload_on_write = true,
 
   hijack_netrw = true,
-
 
   view = {
     adaptive_size = true,
@@ -77,3 +83,4 @@ require("nvim-tree").setup({
     timeout = 400,
   },
 })
+

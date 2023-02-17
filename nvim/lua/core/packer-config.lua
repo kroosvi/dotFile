@@ -82,6 +82,8 @@ require('packer').startup(function(use)
   --themes
   use 'RRethy/nvim-base16'
   use 'EdenEast/nightfox.nvim'
+  use "daschw/leaf.nvim"
+  use 'kvrohit/mellow.nvim'
 
   --lazy git 
   use 'kdheepak/lazygit.nvim'

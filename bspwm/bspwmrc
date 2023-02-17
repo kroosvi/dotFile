@@ -11,7 +11,7 @@ sxhkd &
 picom &
 fcitx -d &
 unclutter & 
-feh --bg-scale --randomize ~/wallpapers &
+feh --bg-scale --randomize ~/.config/feh/wallpaper &
 sh ~/.config/polybar/launch.sh
 
 bspc monitor -d 1 2 3 4 5 6 7 8 
