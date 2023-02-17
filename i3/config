@@ -3,13 +3,13 @@
 #-------------------------------------#
 #------------AutoStart----------------#
 #-------------------------------------#
+exec_always --no-startup-id .config/polybar/launch.sh 
 exec_always --no-startup-id mpd
 exec_always --no-startup-id unclutter
 exec        --no-startup-id nm-applet
 exec        --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec_always --no-startup-id .config/polybar/launch.sh --colorblocks 
 exec_always                 picom
-exec        --no-startup-id fcitx -d
+exec_always --no-startup-id fcitx -d
 exec        --no-startup-id feh --bg-scale --randomize ~/wallpapers
 
 # removes the titlebar
@@ -23,7 +23,7 @@ exec_always --no-startup-id $HOME/.screenlayout/simple.sh
 #-------------------------------------#
 set $launcher ~/.config/rofi/launchers/type-1/launcher.sh
 set $browser1 brave
-set $browser2 google-chrome-stable
+set $browser2 firefox
 set $fileManger thunar
 set $terminal alacritty
 
@@ -36,6 +36,9 @@ bindsym $mod+F5      exec pavucontrol
 #browser
 bindsym $mod+F2      exec $browser2
 bindsym $mod+F1      exec $browser1
+
+#email
+bindsym $mod+F3      exec thunderbird
 
 #tools
 bindsym $mod+Return  exec $terminal
@@ -129,16 +132,16 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 #/---workspace(name,move) setting---/#
-set $ws1 "I"   
-set $ws2 "II"
-set $ws3 "III"
-set $ws4 "IV"
-set $ws5 "V"
-set $ws6 "VI"
-set $ws7 "VII"
-set $ws8 "VIII"
-set $ws9 "IX"
-set $ws10 "X"
+set $ws1 "1"   
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 
 #Assign specific workspace to specific monitor
 workspace $ws1 output DP-0
