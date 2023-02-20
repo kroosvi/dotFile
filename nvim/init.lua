@@ -1,17 +1,21 @@
-require("core.packer-config")
-require("core.vim-setting")
-require("core.finder-config")
-require("core.nvim-tree")
-require("core.keymapping")
-require("core.autoclose")
-require("core.terminal")
+local impatient_ok, impatient = pcall(require, "impatient")
+if impatient_ok then impatient.enable_profile() end
 
-require("looks.UI-related")
-require("looks.lualine")
-require("looks.tab")
+for _, source in ipairs {
+  "core.utils",
+  "core.options",
+  "core.bootstrap",
+  "core.diagnostics",
+  "core.autocmds",
+  "core.mappings",
+  "configs.which-key-register",
+} do
+  local status_ok, fault = pcall(require, source)
+  if not status_ok then vim.api.nvim_err_writeln("Failed to load " .. source .. "\n\n" .. fault) end
+end
 
-require("LSP.lsp-config")
---Wanted: Implement a theme changer base on time(logic control flow basically)
+astronvim.conditional_func(astronvim.user_plugin_opts("polish", nil, false))
 
---auto change the dir to the current working dir
-vim.opt.autochdir = true
+if vim.fn.has "nvim-0.8" ~= 1 or vim.version().prerelease then
+  vim.schedule(function() astronvim.notify("Unsupported Neovim Version! Please check the requirements", "error") end)
+end
