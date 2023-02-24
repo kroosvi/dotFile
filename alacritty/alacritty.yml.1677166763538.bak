@@ -8,32 +8,32 @@
 # References:
 #   https://github.com/alacritty/alacritty
 colors:
-  name: Embers (light)
-  author: Chris Kempson
+  # Default colors
   primary:
-    background: "#dbd6d1"
-    foreground: "#433b32"
-  cursor:
-    text: "#dbd6d1"
-    cursor: "#433b32"
+    background: '#27292c'
+    foreground: '#d0d2d1'
+
+  # Normal colors
   normal:
-    black: "#16130f"
-    red: "#826d57"
-    green: "#57826d"
-    yellow: "#6d8257"
-    blue: "#6d5782"
-    magenta: "#82576d"
-    cyan: "#576d82"
-    white: "#a39a90"
+    black: '#35383b'
+    red: '#b05655'
+    green: '#769972'
+    yellow: '#e1a574'
+    blue: '#7693ac'
+    magenta: '#977ba0'
+    cyan: '#749e99'
+    white: '#848b92'
+
+  # Bright colors
   bright:
-    black: "#5a5047"
-    red: "#826d57"
-    green: "#57826d"
-    yellow: "#6d8257"
-    blue: "#6d5782"
-    magenta: "#82576d"
-    cyan: "#576d82"
-    white: "#dbd6d1"
+    black: '#484c52'
+    red: '#d27c7b'
+    green: '#dffebe'
+    yellow: '#f0d189'
+    blue: '#96b1c9'
+    magenta: '#bfa5c7'
+    cyan: '#9fc9c3'
+    white: '#fcf7e2'
 key_bindings:
   - {
       key: Return,
@@ -50,9 +50,9 @@ window:
 
 font:
   normal:
-    family: Mononoki Nerd Font Mono
-    style: regualr
+    family: source code pro
+    style: thin
   size: 12
 live_config_reload: true
 dynamic_padding: true
-theme: Embers.light
+theme: Hybrid

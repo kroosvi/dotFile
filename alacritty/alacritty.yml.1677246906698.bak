@@ -8,32 +8,32 @@
 # References:
 #   https://github.com/alacritty/alacritty
 colors:
-  name: Embers (light)
-  author: Chris Kempson
+  name: Trim Yer Beard
+  author: franksn
   primary:
-    background: "#dbd6d1"
-    foreground: "#433b32"
+    background: "#191716"
+    foreground: "#DABA8B"
   cursor:
-    text: "#dbd6d1"
-    cursor: "#433b32"
+    text: "#191716"
+    cursor: "#DABA8B"
   normal:
-    black: "#16130f"
-    red: "#826d57"
-    green: "#57826d"
-    yellow: "#6d8257"
-    blue: "#6d5782"
-    magenta: "#82576d"
-    cyan: "#576d82"
-    white: "#a39a90"
+    black: "#0F0E0D"
+    red: "#845336"
+    green: "#57553C"
+    yellow: "#A17E3E"
+    blue: "#43454F"
+    magenta: "#604848"
+    cyan: "#5C6652"
+    white: "#A18B62"
   bright:
-    black: "#5a5047"
-    red: "#826d57"
-    green: "#57826d"
-    yellow: "#6d8257"
-    blue: "#6d5782"
-    magenta: "#82576d"
-    cyan: "#576d82"
-    white: "#dbd6d1"
+    black: "#383332"
+    red: "#8C4F4A"
+    green: "#898471"
+    yellow: "#C8B491"
+    blue: "#65788F"
+    magenta: "#755E4A"
+    cyan: "#718062"
+    white: "#BC9D66"
 key_bindings:
   - {
       key: Return,
@@ -55,4 +55,4 @@ font:
   size: 12
 live_config_reload: true
 dynamic_padding: true
-theme: Embers.light
+theme: Trim-yer-beard

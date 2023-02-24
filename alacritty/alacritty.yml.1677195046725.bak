@@ -8,32 +8,32 @@
 # References:
 #   https://github.com/alacritty/alacritty
 colors:
-  name: Embers (light)
+  name: Grayscale (dark)
   author: Chris Kempson
   primary:
-    background: "#dbd6d1"
-    foreground: "#433b32"
+    background: "#101010"
+    foreground: "#b9b9b9"
   cursor:
-    text: "#dbd6d1"
-    cursor: "#433b32"
+    text: "#101010"
+    cursor: "#b9b9b9"
   normal:
-    black: "#16130f"
-    red: "#826d57"
-    green: "#57826d"
-    yellow: "#6d8257"
-    blue: "#6d5782"
-    magenta: "#82576d"
-    cyan: "#576d82"
-    white: "#a39a90"
+    black: "#101010"
+    red: "#7c7c7c"
+    green: "#8e8e8e"
+    yellow: "#a0a0a0"
+    blue: "#686868"
+    magenta: "#747474"
+    cyan: "#868686"
+    white: "#b9b9b9"
   bright:
-    black: "#5a5047"
-    red: "#826d57"
-    green: "#57826d"
-    yellow: "#6d8257"
-    blue: "#6d5782"
-    magenta: "#82576d"
-    cyan: "#576d82"
-    white: "#dbd6d1"
+    black: "#525252"
+    red: "#7c7c7c"
+    green: "#8e8e8e"
+    yellow: "#a0a0a0"
+    blue: "#686868"
+    magenta: "#747474"
+    cyan: "#868686"
+    white: "#f7f7f7"
 key_bindings:
   - {
       key: Return,
@@ -50,9 +50,9 @@ window:
 
 font:
   normal:
-    family: Mononoki Nerd Font Mono
-    style: regualr
+    family: source code pro
+    style: thin
   size: 12
 live_config_reload: true
 dynamic_padding: true
-theme: Embers.light
+theme: Grayscale.dark
