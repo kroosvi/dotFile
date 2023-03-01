@@ -8,32 +8,32 @@
 # References:
 #   https://github.com/alacritty/alacritty
 colors:
-  name: Ashes (dark)
-  author: Chris Kempson
+  name: aikofog
+  author: Gutterslob
   primary:
-    background: "#1c2023"
-    foreground: "#c7ccd1"
+    background: "#f1eee9"
+    foreground: "#b2b3b8"
   cursor:
-    text: "#1c2023"
-    cursor: "#c7ccd1"
+    text: "#f1eee9"
+    cursor: "#b2b3b8"
   normal:
-    black: "#1c2023"
-    red: "#c7ae95"
-    green: "#95c7ae"
-    yellow: "#aec795"
-    blue: "#ae95c7"
-    magenta: "#c795ae"
-    cyan: "#95aec7"
-    white: "#c7ccd1"
+    black: "#757475"
+    red: "#936a6f"
+    green: "#668462"
+    yellow: "#7f7b62"
+    blue: "#6e7291"
+    magenta: "#846887"
+    cyan: "#637e7b"
+    white: "#9a9a9a"
   bright:
-    black: "#747c84"
-    red: "#c7ae95"
-    green: "#95c7ae"
-    yellow: "#aec795"
-    blue: "#ae95c7"
-    magenta: "#c795ae"
-    cyan: "#95aec7"
-    white: "#f3f4f5"
+    black: "#4a4a4a"
+    red: "#d76572"
+    green: "#4fae42"
+    yellow: "#a8981f"
+    blue: "#7782cf"
+    magenta: "#b754c4"
+    cyan: "#2ea89a"
+    white: "#c4c4c4"
 key_bindings:
   - {
       key: Return,
@@ -55,4 +55,4 @@ font:
   size: 12
 live_config_reload: true
 dynamic_padding: true
-theme: Ashes.dark
+theme: Gutterslob - aikofog

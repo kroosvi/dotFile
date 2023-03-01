@@ -8,32 +8,32 @@
 # References:
 #   https://github.com/alacritty/alacritty
 colors:
-  name: Ashes (dark)
+  name: Grayscale (dark)
   author: Chris Kempson
   primary:
-    background: "#1c2023"
-    foreground: "#c7ccd1"
+    background: "#101010"
+    foreground: "#b9b9b9"
   cursor:
-    text: "#1c2023"
-    cursor: "#c7ccd1"
+    text: "#101010"
+    cursor: "#b9b9b9"
   normal:
-    black: "#1c2023"
-    red: "#c7ae95"
-    green: "#95c7ae"
-    yellow: "#aec795"
-    blue: "#ae95c7"
-    magenta: "#c795ae"
-    cyan: "#95aec7"
-    white: "#c7ccd1"
+    black: "#101010"
+    red: "#7c7c7c"
+    green: "#8e8e8e"
+    yellow: "#a0a0a0"
+    blue: "#686868"
+    magenta: "#747474"
+    cyan: "#868686"
+    white: "#b9b9b9"
   bright:
-    black: "#747c84"
-    red: "#c7ae95"
-    green: "#95c7ae"
-    yellow: "#aec795"
-    blue: "#ae95c7"
-    magenta: "#c795ae"
-    cyan: "#95aec7"
-    white: "#f3f4f5"
+    black: "#525252"
+    red: "#7c7c7c"
+    green: "#8e8e8e"
+    yellow: "#a0a0a0"
+    blue: "#686868"
+    magenta: "#747474"
+    cyan: "#868686"
+    white: "#f7f7f7"
 key_bindings:
   - {
       key: Return,
@@ -55,4 +55,4 @@ font:
   size: 12
 live_config_reload: true
 dynamic_padding: true
-theme: Ashes.dark
+theme: Grayscale.dark

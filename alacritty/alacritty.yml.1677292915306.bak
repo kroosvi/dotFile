@@ -8,32 +8,32 @@
 # References:
 #   https://github.com/alacritty/alacritty
 colors:
-  name: Ashes (dark)
+  name: Embers (light)
   author: Chris Kempson
   primary:
-    background: "#1c2023"
-    foreground: "#c7ccd1"
+    background: "#dbd6d1"
+    foreground: "#433b32"
   cursor:
-    text: "#1c2023"
-    cursor: "#c7ccd1"
+    text: "#dbd6d1"
+    cursor: "#433b32"
   normal:
-    black: "#1c2023"
-    red: "#c7ae95"
-    green: "#95c7ae"
-    yellow: "#aec795"
-    blue: "#ae95c7"
-    magenta: "#c795ae"
-    cyan: "#95aec7"
-    white: "#c7ccd1"
+    black: "#16130f"
+    red: "#826d57"
+    green: "#57826d"
+    yellow: "#6d8257"
+    blue: "#6d5782"
+    magenta: "#82576d"
+    cyan: "#576d82"
+    white: "#a39a90"
   bright:
-    black: "#747c84"
-    red: "#c7ae95"
-    green: "#95c7ae"
-    yellow: "#aec795"
-    blue: "#ae95c7"
-    magenta: "#c795ae"
-    cyan: "#95aec7"
-    white: "#f3f4f5"
+    black: "#5a5047"
+    red: "#826d57"
+    green: "#57826d"
+    yellow: "#6d8257"
+    blue: "#6d5782"
+    magenta: "#82576d"
+    cyan: "#576d82"
+    white: "#dbd6d1"
 key_bindings:
   - {
       key: Return,
@@ -55,4 +55,4 @@ font:
   size: 12
 live_config_reload: true
 dynamic_padding: true
-theme: Ashes.dark
+theme: Embers.light
