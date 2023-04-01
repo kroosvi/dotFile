@@ -3,14 +3,16 @@
 #-------------------------------------#
 #------------AutoStart----------------#
 #-------------------------------------#
-exec_always --no-startup-id .config/polybar/launch.sh 
 exec_always --no-startup-id mpd
 exec_always --no-startup-id unclutter
 exec        --no-startup-id nm-applet
 exec        --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always                 picom
 exec_always --no-startup-id fcitx -d
-exec        --no-startup-id feh --bg-scale --randomize ~/wallpapers
+exec_always --no-startup-id .config/polybar/launch.sh 
+exec_always --no-startup-id sh ~/.config/script/wallpaper_changer.sh
+exec_always --no-startup-id sh ~/.config/script/screen_1.sh
+
 
 # removes the titlebar
 for_window [class="^.*"] border pixel 
@@ -21,14 +23,14 @@ exec_always --no-startup-id $HOME/.screenlayout/simple.sh
 #-------------------------------------#
 #-------Start Some Common Apps--------#
 #-------------------------------------#
-set $launcher ~/.config/rofi/launchers/type-1/launcher.sh
+set $launcher rofi -combi-modi drun -font"source code pro 12" -show combi
 set $browser1 brave
 set $browser2 firefox
 set $fileManger thunar
 set $terminal alacritty
 
 #launcer
-bindsym $mod+d       exec $launcher 
+bindsym $mod+space       exec $launcher 
 
 #audio
 bindsym $mod+F5      exec pavucontrol
@@ -108,7 +110,7 @@ bindsym $mod+j focus down
 bindsym $mod+l focus right
 
 #/---kill focused window---/#
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 #/---Vim style move focused window---/#
 bindsym $mod+Shift+h move left
